@@ -1,0 +1,169 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+    background: var(--pale-blue) url('../images/pattern-background-mobile.svg') center no-repeat;
+    background-size: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container .card {
+    width: 88%;
+    max-width: 375px;
+    background-color: #fff;
+    margin-top: 4rem;
+    border-radius: 1.3rem;
+    box-shadow: 10px 10px 20px hsl(245, 75%, 52%, .1), 15px 15px 30px hsl(245, 75%, 52%, .1);
+}
+
+.container .card .image-hero {
+    width: 100%;
+    border-radius: 1.3rem 1.3rem 0 0;
+}
+
+.container .card .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+}
+
+.container .summary .title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.container .summary .sub-title {
+    font-size: 1.5rem;
+    color: var(--desaturated-blue);
+    font-weight: 500;
+    line-height: 2.5rem;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.container .card .planning {
+    background-color: var(--very-pale-blue);
+    border-radius: 1rem;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1.5rem 1rem;
+}
+
+.container .card .planning .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container .card .planning .plan {
+    color: var(--dark-blue);
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: .2rem;
+}
+
+.container .card .planning p {
+    color: var(--desaturated-blue);
+    font-size: 1.4rem;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.container .card .planning a {
+    color: var(--bright-blue);
+    font-weight: 900;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.container .card .planning a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.container .card .payment .btn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.primary {
+    background-color: var(--bright-blue);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 1.3rem;
+    padding: 1.3rem 0;
+    box-shadow: 10px 10px 20px hsl(245, 75%, 52%, .1), 15px 15px 30px hsl(245, 75%, 52%, .1);
+}
+
+.primary:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.secondary {
+    background-color: transparent;
+    color: var(--desaturated-blue);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 1.3rem 0;
+}
+
+.secondary:hover {
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background: var(--pale-blue) url('../images/pattern-background-desktop.svg') center no-repeat;
+    }
+
+    .container {
+        align-items: center;
+    }
+}
+
+/* Attribution */
+.attribution {
+    margin-top: .5rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    font-weight: 700;
+}
